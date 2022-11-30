@@ -1,0 +1,1 @@
+sqlite3 projet "select * from data;"
