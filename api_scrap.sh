@@ -14,5 +14,5 @@ bnb_usd=$(echo $bnb_data | grep -oP '(?<=ethusd":")[\d|.]*' | head -1)
 bnb_usd_timestamp=$(echo $bnb_data | grep -oP '(?<=ethusd_timestamp":")[\d|.]*' | head -1)
 #
 # BDD Insert
-./db_insert.sh 'data_btc' $bnb_btc_timestamp $bnb_btc
-./db_insert.sh 'data_usd' $bnb_usd_timestamp $bnb_usd
+./BDD/db_insert.sh 'data_btc' $bnb_btc_timestamp $bnb_btc
+./BDD/db_insert.sh 'data_usd' $bnb_usd_timestamp $bnb_usd
