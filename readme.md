@@ -29,3 +29,6 @@ start the server if not already started
 ```bash
 sudo service apache2 start
 ```
+  
+**Deploy the web site with ngrok**  
+https://ngrok.com/download 
