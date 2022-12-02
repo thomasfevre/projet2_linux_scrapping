@@ -1,1 +1,1 @@
-sqlite3 projet "select * from data;"
+sqlite3 projet "select * from $1;"

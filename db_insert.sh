@@ -1,1 +1,1 @@
-sqlite3 projet "insert into data (date, value) values ('$1','$2');"
+sqlite3 projet "insert into $1 (date, value) values ('$2','$3');"
