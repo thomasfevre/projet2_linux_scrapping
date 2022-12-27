@@ -6,7 +6,7 @@ BSC_SCAN_APIKEY=$(printenv BSC_SCAN_APIKEY)
 bnb_data=$(curl -L "https://api.bscscan.com/api?module=stats&action=bnbprice&apikey=$BSC_SCAN_APIKEY")
 #
 
-#
+# Grep the right datas
 bnb_btc=$(echo $bnb_data | grep -oP '(?<=ethbtc":")[\d|.]*' | head -1)
 bnb_btc_timestamp=$(echo $bnb_data | grep -oP '(?<=ethbtc_timestamp":")[\d|.]*' | head -1)
 bnb_usd=$(echo $bnb_data | grep -oP '(?<=ethusd":")[\d|.]*' | head -1)

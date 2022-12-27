@@ -1,9 +1,11 @@
 #!/bin/bash
 
+# Get the data for the database
 avg=$(sqlite3 /home/tfevre/projet2/projet2_linux_scrapping/projet "select AVG(value) from data_usd;")
 datas=$(sqlite3 /home/tfevre/projet2/projet2_linux_scrapping/projet "select value from data_usd;")
 data=($(echo $datas | grep '[\d|\.]*'))
 
+# Process the normal values spread 
 sum=0
 for i in `seq 1 ${#data[@]}` ; do
     # redefine variable 'sum' after each iteration of for-loop
@@ -14,12 +16,11 @@ for i in `seq 1 ${#data[@]}` ; do
 done
 
 ecart=$(bc -l <<< "(sqrt($sum / ${#data[@]}) )")
-echo $ecart
+
 min=$(echo "$avg - (2 * $ecart)" | bc -l)
 max=$(echo "$avg + (2 * $ecart)" | bc -l)
-echo $min
-echo $max
 
+# Update the html webpage
 touch test.html
 cat > test.html << EOF
 
@@ -44,7 +45,7 @@ echo '</p>
 </html>' >> test.html
 sudo cp test.html /var/www/html/index.html
 
-#Telegram
+# Send a message on Telegram
 if [ "$(echo " $1 < $min || $1 > $max " | bc -l )" == 1 ]; then
     message='Le prix du $BNB est anormal :$'$1
     message="$message https://266e-20-43-56-90.eu.ngrok.io"
