@@ -14,8 +14,11 @@ for i in `seq 1 ${#data[@]}` ; do
 done
 
 ecart=$(bc -l <<< "(sqrt($sum / ${#data[@]}) )")
+echo $ecart
 min=$(echo "$avg - (2 * $ecart)" | bc -l)
 max=$(echo "$avg + (2 * $ecart)" | bc -l)
+echo $min
+echo $max
 
 touch test.html
 cat > test.html << EOF
@@ -44,6 +47,6 @@ sudo cp test.html /var/www/html/index.html
 #Telegram
 if [ "$(echo " $1 < $min || $1 > $max " | bc -l )" == 1 ]; then
     message='Le prix du $BNB est anormal :$'$1
-    message='$message https://fa00-20-43-56-90.eu.ngrok.io'
+    message="$message https://266e-20-43-56-90.eu.ngrok.io"
     /home/tfevre/projet2/projet2_linux_scrapping/telegram_bot.sh "$message"
 fi
