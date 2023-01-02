@@ -16,7 +16,7 @@ Specifications
 • The code run on your online hosted virtual machine (24/7)  
 • It is written in bash  
 • Website accessible via this link (if it does not work, please contact me):  
-https://2ac5-20-43-56-90.eu.ngrok.io
+https://8b3b-20-43-56-90.eu.ngrok.io
 
 ## Architecture
 
