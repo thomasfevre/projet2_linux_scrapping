@@ -13,7 +13,7 @@ minute or so, with an API
 - I have my own running webpage listing historical anomalies too  
 
 Specifications  
-• The code run on your online hosted virtual machine (24/7)  
+• The code run on an online hosted virtual machine (24/7, here it is azure)  
 • It is written in bash  
 • Website accessible via this link (if it does not work, please contact me):  
 https://8b3b-20-43-56-90.eu.ngrok.io
