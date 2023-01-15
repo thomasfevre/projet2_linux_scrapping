@@ -16,7 +16,9 @@ Specifications
 • The code run on an online hosted virtual machine (24/7, here it is azure)  
 • It is written in bash  
 • Website accessible via this link (if it does not work, please contact me):  
-https://8b3b-20-43-56-90.eu.ngrok.io
+https://8b3b-20-43-56-90.eu.ngrok.io  
+Here is an exemple of a telegram message :  
+![telegram msg](telegram.jpg)
 
 ## Architecture
 
