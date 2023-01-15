@@ -17,6 +17,8 @@ Specifications
 • It is written in bash  
 • Website accessible via this link (if it does not work, please contact me):  
 https://8b3b-20-43-56-90.eu.ngrok.io  
+(Also, here is an exemple of the website: https://thomasfevre.github.io/projet2_linux_scrapping/index.html)  
+  
 Here is an exemple of a telegram message :  
 ![telegram msg](telegram.jpeg)
 
