@@ -18,7 +18,7 @@ Specifications
 • Website accessible via this link (if it does not work, please contact me):  
 https://8b3b-20-43-56-90.eu.ngrok.io  
 Here is an exemple of a telegram message :  
-![telegram msg](telegram.jpg)
+![telegram msg](telegram.jpeg)
 
 ## Architecture
 
